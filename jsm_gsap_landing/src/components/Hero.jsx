@@ -19,7 +19,8 @@ const Hero = () => {
       yPercent: 100,
       duration: 1.8,
       ease: 'expo.out',
-      stagger: 0.05
+      stagger: 0.05,
+      opacity: 0
     })
 
     gsap.from(paragraphSplit.lines, {
@@ -33,7 +34,7 @@ const Hero = () => {
 
     gsap.timeline({
       scrollTrigger: {
-        trigger: '#hero',
+        trigger: 'hero',
         start: 'top top',
         end: 'bottom top',
         scrub: true
